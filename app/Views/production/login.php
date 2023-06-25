@@ -131,6 +131,10 @@
         } else if (mensaje == '3'){
             swal(':(','Usuario incorrecto!','error');
         } else if (mensaje == '0'){
-            swal(':(','Error al crear usuario!','error');
-        }
+            swal(':(','El usuario ya existe!','error');
+        } else if (mensaje == '4'){
+		    swal(':D','Actualizado con exito!','success');
+		 } else if (mensaje == '5'){
+		    swal(':(','Error Actualizar usuario!','error');
+			}
     </script>

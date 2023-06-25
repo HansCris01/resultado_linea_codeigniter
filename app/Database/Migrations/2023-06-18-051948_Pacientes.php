@@ -50,6 +50,10 @@ class Pacientes extends Migration
                 'type'       => 'VARCHAR',
                 'constraint' => '50',
             ],
+			'password' => [
+                'type' => 'TEXT',
+                'null' => true,
+            ],
 			 'fecha_registro' => [
                 'type' => 'DATETIME',
                 'null' => true,

@@ -37,13 +37,20 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 $routes->get('/inicio', 'Home::inicio');
+$routes->get('/perfil', 'Home::perfil');
 $routes->post('/login', 'Home::login');
 $routes->get('/salir', 'Home::salir');
 $routes->post('/creacion_usuario_externa', 'Home::creacion_usuario_externa');
-$routes->post('/creacion_usuario_externa', 'Home::creacion_usuario_interna');
+$routes->post('/creacion_usuario_interna', 'Home::creacion_usuario_interna');
 $routes->get('/obtenerIDactualizar_usuario/(:any)', 'Home::obtenerIDactualizar_usuario/$1');
-$routes->post('/actualizar_usuario', 'Home::actualizar_usuario');
-$routes->post('/desactivar_usuario', 'Home::desactivar_usuario');
+$routes->post('/actualizar_usuario_all', 'Home::actualizar_usuario_all');
+$routes->post('/actualizar_usuario_logueado', 'Home::actualizar_usuario_logueado');
+$routes->get('/editar_usuario_log', 'Home::editar_usuario_log');
+$routes->post('/desactivar_usuario', 'Home::desactivar_usuario'); 
+$routes->post('/activar_usuario', 'Home::activar_usuario');
+$routes->get('/lst_usuario/(:any)', 'Home::lst_usuario/$1');
+
+
 /*
  * --------------------------------------------------------------------
  * Additional Routing
